@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório - Arduino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>FACULDADE ANHANGUERA DE UBERLÂNDIA</h1>
+        <h2>Curso de Graduação em Sistemas de Informação</h2>
+        <h3>Disciplina de Desenvolvimento de Sistemas de Informação</h3>
+        <h4>Professor: Rodrigo Morais</h4>
+    </header>
+
+    <section class="report">
+        <h2>Relatório: Semáforo</h2>
+        <p>Ana Júlia Fernandes Oliveira<br>
+           Amanda Nelma Prado Borges<br>
+           Laryssa Nogueira Alves<br>
+           Livia Rayssa Oliveira Silva<br>
+           Luiz Paulo Parreira Lima</p>
+      
+    </section>
+
+    <section>
+        <h2>Sumário</h2>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#objetivos">Objetivos</a></li>
+            <li><a href="#materiais">Materiais Utilizados</a></li>
+            <li><a href="#diagrama">Diagrama do Circuito</a></li>
+            <li><a href="#codigo">Código Fonte</a></li>
+            <li><a href="#procedimentos">Procedimentos</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#discussao">Discussão</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#referencias">Referências</a></li>
+        </ul>
+
+
+    </section>
+
+    <section>
+        <h2>Introdução</h2>
+        <p>O Arduino é uma plataforma que possibilita o desenvolvimento de projetos eletrônicos. Ele é composto por hardware e software. Seu principal componente é o microcontrolador, que processa programas e gerencia as entradas e saídas.</p>
+    </section>
+
+    <section>
+        <h2>Objetivos</h2>
+        <p>O objetivo da aula prática foi observar como funciona todo o processo prático da criação de um objeto em Arduino anteriormente apresentado de forma teórica nas aulas.</p>
+    </section>
+
+    <section>
+        <h2>Materiais Utilizados</h2>
+        <ul>
+            <li>Arduino Uno R3</li>
+            <li>LED Verde</li>
+            <li>LED Amarelo</li>
+            <li>LED Vermelho</li>
+            <li>Resistor 150 Ω</li>
+            <li>Placa de Ensaio Pequena</li>
+            <li>Fios jumpers</li>
+            <li>Cabo USB</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Diagrama do Circuito</h2>
+        <img src="circuito.jpg" alt="Diagrama do Circuito Arduino" class="circuit-image">
+        <img src="circuito2.jpg" alt="Diagrama do Circuito Alternativo" class="circuit-image">
+    </section>
+
+    <section>
+        <h2>Código Fonte</h2>
+        <pre>
+<code>
+// C++ code
+void setup()
+{
+  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(7,OUTPUT);
+  pinMode(4,OUTPUT);
+  pinMode(2,OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(7, HIGH);
+  delay(2000);
+  digitalWrite(7, LOW);
+  digitalWrite(4, HIGH);
+  delay(2000);
+  digitalWrite(4, LOW);
+  digitalWrite(2, HIGH);
+  delay(2000);
+  digitalWrite(2, LOW);
+}
+        </code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Procedimentos</h2>
+        <h3>Montagem do Circuito</h3>
+        <p>Organização dos Componentes:</p>
+        <ol>
+            <li>Coloque o Arduino Uno em uma superfície plana e estável.</li>
+            <li>Separe o protoboard, LEDs, resistores, e fios jumpers.</li>
+        </ol>
+        <h3>Conexão dos LEDs:</h3>
+        <ol>
+            <li>LED Vermelho: Conecte o terminal positivo ao pino digital 2 do Arduino.</li>
+            <li>LED Amarelo: Conecte o terminal positivo ao pino digital 4 do Arduino.</li>
+            <li>LED Verde: Conecte o terminal positivo ao pino digital 7 do Arduino.</li>
+        </ol>
+        <h3>Instalação dos Resistores:</h3>
+        <p>Conecte um resistor de 150Ω ao terminal positivo de cada LED.</p>
+        <h3>Conexão ao GND:</h3>
+        <p>Conecte o barramento de terra do protoboard ao pino GND do Arduino Uno usando um fio jumper.</p>
+        <h3>Verificação da Montagem:</h3>
+        <p>Verifique todas as conexões para garantir que os LEDs estejam corretamente conectados.</p>
+        <h3>Configuração do Software</h3>
+        <p>Instale a IDE do Arduino e conecte o Arduino ao computador.</p>
+    </section>
+
+    <section>
+        <h2>Resultados</h2>
+        <p>Após o upload do código, o semáforo simulado começou a funcionar conforme o planejado.</p>
+    </section>
+
+    <section>
+        <h2>Discussão</h2>
+        <p>O projeto foi bem-sucedido em simular o funcionamento básico de um semáforo.</p>
+    </section>
+
+    <section>
+        <h2>Conclusão</h2>
+        <p>O projeto de semáforo utilizando o Arduino Uno cumpriu os objetivos propostos.</p>
+    </section>
+
+    <section>
+        <h2>Referências</h2>
+        <ul>
+            <li><a href="https://www.arduino.cc/reference/pt/">Arduino IDE Documentação</a></li>
+            <li><a href="https://embarcados.com.br/pinos-digitais-do-arduino/">Embarcados</a></li>
+        </ul>
+    </section>
+</body>
+</html>
